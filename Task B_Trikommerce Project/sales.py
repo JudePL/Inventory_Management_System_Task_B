@@ -24,6 +24,6 @@ The function will also update the inventory_records (For restocking) for a  give
 
     if current_day % 7 != 0: # Skip restocking days (only handle sales on non-restocking days)
         available_items -= sold_units # Deduct sold units from available stock.
-        inventory_records.append([current_day, sold_units, 0, available_items]) # Updates/records inventory for daily sales and remaining stock
+        inventory_records.append([current_day, sold_units, 0, available_items]) # Appends inventory for daily sales and remaining stock
     
     return available_items # Return updated available items
