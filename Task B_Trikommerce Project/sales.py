@@ -22,7 +22,7 @@ The function will also update the inventory_records (For restocking) for a  give
 
     sold_units = random.randint(0, 200) # Generates random sales (0 to 200 units)
 
-    if current_day % 7 != 0: # Skip restocking days (only handle sales on non-restocking days)
+    if current_day % 7 == 0: # Skip restocking days (only handle sales on non-restocking days)
         available_items -= sold_units # Deduct sold units from available stock.
         inventory_records.append([current_day, sold_units, 0, available_items]) # Appends inventory for daily sales and remaining stock
     
