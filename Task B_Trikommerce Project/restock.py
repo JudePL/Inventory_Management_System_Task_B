@@ -20,10 +20,10 @@ The function will also update the inventory_records (For restocking) for a  give
 
     if current_day == 0: # Initialize inventory on day 0
         inventory_records.append([0, 0, 2000, 2000]) # Sets inventory on day 0 full of stock (2000 items)
-        available_items = 2000 # Sets available_items to 2000
     elif current_day % 7 == 0: # Restock's every 7th Day
         inventory_records.append([current_day, 0,(2000 - available_items), 2000]) # Updates restocking to 2000
-        available_items = 2000 # Sets available_items to 2000
+
+    available_items = 2000 # Sets available_items to 2000
 
     return available_items # Returns the updated "available_items" after restocking
 
